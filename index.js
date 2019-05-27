@@ -4,8 +4,11 @@ const REMOVE_ONE = "REMOVE_ONE";
 
 const myCoolReducer = (state = { counter: 0 }, action) => {
   switch (action.type) {
-    case ADD_ONE:
-      return { ...state, counter: state.counter + 1 };
+    case ADD_ONE: {
+      const newState = { ...state };
+      newState.counter + 1;
+      return newState;
+    }
     case REMOVE_ONE:
       return { counter: state.counter - 1 };
     default:

@@ -847,9 +847,12 @@ var myCoolReducer = function myCoolReducer() {
 
   switch (action.type) {
     case ADD_ONE:
-      return _objectSpread({}, state, {
-        counter: state.counter + 1
-      });
+      {
+        var newState = _objectSpread({}, state);
+
+        newState.counter + 1;
+        return newState;
+      }
 
     case REMOVE_ONE:
       return {
